@@ -137,7 +137,7 @@ const Skills = () => {
                 {category.title}
               </h3>
               <ul className="space-y-3">
-                {displayedSkills.map((skill, idx) => (
+                {displayedSkills.map((skill) => (
                   <motion.li
                     key={skill.name}
                     className="flex items-center gap-3 text-lg text-gray-700 dark:text-gray-300"
