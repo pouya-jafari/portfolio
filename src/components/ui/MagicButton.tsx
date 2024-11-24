@@ -2,17 +2,10 @@ type MagicButton = {
   title: string;
   icon: React.ReactNode;
   position: string;
-  handleClick?: () => void;
   otherClasses?: string;
 };
 
-const MagicButton = ({
-  title,
-  icon,
-  position,
-  handleClick,
-  otherClasses,
-}: MagicButton) => {
+const MagicButton = ({ title, icon, position, otherClasses }: MagicButton) => {
   return (
     <button className=" relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 md:w-60 md:mt-10 transition transform duration-300 hover:scale-105">
       <span className="absolute  -inset-[10px] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#a2d2ff_0%,#0284c7_50%,#a2d2ff_100%)]" />

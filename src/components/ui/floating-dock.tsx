@@ -128,7 +128,6 @@ function IconContainer({
     return val - bounds.x - bounds.width / 2;
   });
 
-  // Slightly reduce hover and default sizes
   let widthTransform = useTransform(distance, [-150, 0, 150], [50, 90, 50]);
   let heightTransform = useTransform(distance, [-150, 0, 150], [50, 90, 50]);
 
