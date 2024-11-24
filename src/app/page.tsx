@@ -1,13 +1,21 @@
+import Avatar from "@/components/Avatar";
+import { FloatingDockDemo } from "@/components/Dock";
 import Hero from "@/components/Hero";
-import { ModeToggle } from "@/components/ModeToggle";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <main className="relative dark:bg-black-100  flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
-        <ModeToggle />
-        <Hero />
-      </div>
-    </main>
+    <div className="overflow-x-hidden overflow-y-hidden">
+      <Avatar />
+      <main className="relative dark:bg-black-100 flex flex-col items-center justify-center mx-auto sm:px-10 px-5">
+        <div className="max-w-7xl w-full md:mb-16 max-sm:mb-2">
+          <Hero />
+          <Skills />
+          <Projects />
+        </div>
+        <FloatingDockDemo />
+      </main>
+    </div>
   );
 }
