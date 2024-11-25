@@ -4,9 +4,9 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconHome,
-  IconNewSection,
+  IconBallpenFilled,
   IconTerminal2,
-  IconNotes,
+  IconVocabulary,
 } from "@tabler/icons-react";
 
 export function FloatingDock() {
@@ -29,16 +29,16 @@ export function FloatingDock() {
     {
       title: "Skills",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBallpenFilled className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#skills",
     },
     {
       title: "Resume",
       icon: (
-        <IconNotes className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconVocabulary className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#resume",
     },
     {
       title: "LinkedIn",

@@ -36,7 +36,7 @@ const AboutMe = () => {
         </motion.div>
 
         <motion.div
-          className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg"
+          className="relative w-full h-[450px] rounded-lg overflow-hidden shadow-lg"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
