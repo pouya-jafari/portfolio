@@ -61,7 +61,6 @@ const Avatar = () => {
 
   return (
     <div className="avatar-container fixed top-4 left-4 flex flex-col items-center z-50">
-      {/* Avatar Image */}
       <div className="w-16 h-16 rounded-full overflow-hidden shadow-md">
         <Image
           src={pouyaImg}

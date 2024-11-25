@@ -35,7 +35,7 @@ const projects: Project[] = [
       { component: <SiTailwindcss />, color: "#06B6D4" },
     ],
     github: "https://github.com/pouya-jafari/portfolio",
-    website: "https://pouya-portfolio.com",
+    website: "https://pouyajafari.netlify.app/",
   },
   {
     title: "Tanje Takeout Restaurant",
