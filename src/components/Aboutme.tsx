@@ -18,10 +18,10 @@ const AboutMe = () => {
             About Me
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            Hi, I’m <strong>Pouya Jafari</strong>, a passionate Full-Stack Web
-            Developer with a knack for crafting interactive and responsive web
-            applications. I specialize in modern web technologies like React,
-            Next.js, Tailwind CSS, and Node.js.
+            Hi, I&apos;m <strong>Pouya Jafari</strong>, a passionate Full-Stack
+            Web Developer with a knack for crafting interactive and responsive
+            web applications. I specialize in modern web technologies like
+            React, Next.js, Tailwind CSS, and Node.js.
           </p>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             My journey started with a love for problem-solving and a curiosity
@@ -29,8 +29,9 @@ const AboutMe = () => {
             skills to create efficient, scalable, and user-friendly solutions.
           </p>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            When I’m not coding, you can find me exploring new technologies,
-            experimenting with design, or contributing to open-source projects.
+            When I&apos;m not coding, you can find me exploring new
+            technologies, experimenting with design, or contributing to
+            open-source projects.
           </p>
         </motion.div>
 
