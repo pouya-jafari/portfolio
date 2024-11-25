@@ -89,20 +89,11 @@ const projects: Project[] = [
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
   const [activeProject, setActiveProject] = useState<number | null>(null);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState<string>("");
 
   const handleToggle = () => setShowAll((prev) => !prev);
 
-  const handleProjectClick = (project: Project) => {
-    if (project.isWorking) {
-      setModalContent(`${project.title} is still under development!`);
-      setModalOpen(true);
-    }
-  };
-
   return (
-    <div className="py-20 px-5" id="projects">
+    <div className="pb-20 px-5" id="projects">
       <h2 className="text-center text-4xl font-bold mb-10 text-blue-500">
         <span className="inline-block align-middle bg-white w-16 h-1 mr-3" />
         My Projects
@@ -137,7 +128,7 @@ const Projects = () => {
                 />
               )
             ) : (
-              <div className="w-full h-64 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+              <div className="w-full h-64 bg-gradient-to-r from-gray-800 via-gray-700 to-blue-600 flex items-center justify-center">
                 <span className="text-4xl font-bold text-white">
                   {project.title
                     .split(" ")
@@ -212,7 +203,7 @@ const Projects = () => {
                     className="w-full h-64 object-cover"
                   />
                 ) : (
-                  <div className="w-full h-64 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                  <div className="w-full h-64 bg-gradient-to-r from-gray-800 via-gray-700 to-blue-600 flex items-center justify-center">
                     <span className="text-5xl font-bold text-white">
                       {project.title
                         .split(" ")

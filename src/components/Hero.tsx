@@ -36,11 +36,13 @@ const Hero = () => {
             <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400 mb-4">
               <FlipWords words={words} />
             </div>
-            <MagicButton
-              title="See my Resume"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
+            <a href="#resume">
+              <MagicButton
+                title="See my Resume"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
           </div>
         </div>
       </div>
