@@ -24,6 +24,7 @@ type Project = {
   icons: { component: JSX.Element; color: string }[];
   github?: string;
   website?: string;
+  isWorking?: boolean;
 };
 
 const projects: Project[] = [
@@ -46,7 +47,7 @@ const projects: Project[] = [
     title: "Tanje Takeout Restaurant",
     image: tanjeImage,
     description:
-      "A visually appealing static website for a takeout restaurant, designed to display the menu, restaurant information, and customer testimonials. Built with React and Tailwind CSS for seamless responsiveness and fast load times.",
+      "A visually appealing static website for a takeout restaurant, designed to display the menu, restaurant information, and customer testimonials.",
     icons: [
       { component: <SiReact />, color: "#61DAFB" },
       { component: <SiTailwindcss />, color: "#06B6D4" },
@@ -60,7 +61,7 @@ const projects: Project[] = [
   {
     title: "Shamim Bakery",
     description:
-      "Still Working - A responsive e-commerce platform for a bakery with an integrated shopping cart, payment gateway, and product search functionality. Future features include order tracking, customer reviews, and personalized recommendations.",
+      "Still Working - A responsive e-commerce platform for a bakery with an integrated shopping cart, payment gateway, and product search functionality. ",
     icons: [
       { component: <SiReact />, color: "#61DAFB" },
       { component: <SiTailwindcss />, color: "#06B6D4" },
@@ -69,6 +70,7 @@ const projects: Project[] = [
     ],
     github: "https://github.com/pouya-jafari/ecommerce",
     website: "https://ecommerce-demo.com",
+    isWorking: true,
   },
   {
     title: "Chat App",
@@ -80,14 +82,24 @@ const projects: Project[] = [
     ],
     github: "https://github.com/pouya-jafari/new-project",
     website: "https://new-project.com",
+    isWorking: true,
   },
 ];
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
   const [activeProject, setActiveProject] = useState<number | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState<string>("");
 
   const handleToggle = () => setShowAll((prev) => !prev);
+
+  const handleProjectClick = (project: Project) => {
+    if (project.isWorking) {
+      setModalContent(`${project.title} is still under development!`);
+      setModalOpen(true);
+    }
+  };
 
   return (
     <div className="py-20 px-5" id="projects">
@@ -189,20 +201,31 @@ const Projects = () => {
                 transition={{ duration: 0.4 }}
                 className="relative group rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800"
               >
-                <motion.img
-                  src={
-                    typeof project.image === "string"
-                      ? project.image
-                      : project.image?.src
-                  }
-                  alt={project.title}
-                  className="w-full h-64 object-cover"
-                />
+                {project.image ? (
+                  <motion.img
+                    src={
+                      typeof project.image === "string"
+                        ? project.image
+                        : project.image?.src
+                    }
+                    alt={project.title}
+                    className="w-full h-64 object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-64 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                    <span className="text-5xl font-bold text-white">
+                      {project.title
+                        .split(" ")
+                        .map((word) => word[0])
+                        .join("")}
+                    </span>
+                  </div>
+                )}
                 <motion.div
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center text-white p-4 space-y-4"
+                  className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center text-white p-4 space-y-4 opacity-0 group-hover:opacity-100"
                 >
                   <h3 className="text-xl font-semibold">{project.title}</h3>
                   <p className="text-sm text-gray-300">{project.description}</p>
