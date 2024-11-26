@@ -3,14 +3,8 @@ import MagicButton from "./ui/HeroButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerator";
 import { FlipWords } from "./ui/FlipWord";
-
+import { words } from "@/data/data";
 const Hero = () => {
-  const words = [
-    "Full-Stack Web Developer",
-    "Front-End Developer",
-    "Back-End Developer",
-    "Software Engineer",
-  ];
   return (
     <div className="pb-20 pt-36" id="home">
       <div>

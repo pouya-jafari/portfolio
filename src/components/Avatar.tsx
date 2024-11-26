@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
-import pouyaImg from "@/assets/pouya-bg.png";
+import pouyaImg from "@/assets/pouya.png";
 
 const Avatar = () => {
   const textRef = useRef<HTMLDivElement>(null);
