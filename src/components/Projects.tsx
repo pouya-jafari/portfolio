@@ -1,90 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-  SiMongodb,
-  SiJavascript,
-  SiRedux,
-  SiVite,
-} from "react-icons/si";
+
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { StaticImageData } from "next/image";
 import { FiArrowDownCircle, FiArrowUpCircle } from "react-icons/fi";
-import portfolioImage from "@/assets/portfolioImage.png";
-import tanjeImage from "@/assets/Tanje.png";
-
-type Project = {
-  title: string;
-  image?: StaticImageData | string;
-  description: string;
-  icons: { component: JSX.Element; color: string }[];
-  github?: string;
-  website?: string;
-  isWorking?: boolean;
-};
-
-const projects: Project[] = [
-  {
-    title: "Portfolio Website",
-    image: portfolioImage,
-    description:
-      "A sleek and modern personal portfolio designed to showcase my skills, projects, and achievements. Built using React, Next.js, and Tailwind CSS with responsive design and smooth animations.",
-    icons: [
-      { component: <SiReact />, color: "#61DAFB" },
-      { component: <SiNextdotjs />, color: "white" },
-      { component: <SiJavascript />, color: "yellow" },
-      { component: <SiTailwindcss />, color: "#06B6D4" },
-      { component: <SiTypescript />, color: "#3178C6" },
-    ],
-    github: "https://github.com/pouya-jafari/portfolio",
-    website: "https://pouyajafari.netlify.app/",
-  },
-  {
-    title: "Tanje Takeout Restaurant",
-    image: tanjeImage,
-    description:
-      "A visually appealing static website for a takeout restaurant, designed to display the menu, restaurant information, and customer testimonials.",
-    icons: [
-      { component: <SiReact />, color: "#61DAFB" },
-      { component: <SiTailwindcss />, color: "#06B6D4" },
-      { component: <SiTypescript />, color: "#3178C6" },
-      { component: <SiJavascript />, color: "yellow" },
-      { component: <SiVite />, color: "pink" },
-    ],
-    github: "https://github.com/pouya-jafari/tanje-restaurant",
-    website: "https://tanje.netlify.app",
-  },
-  {
-    title: "Shamim Bakery",
-    description:
-      "Still Working - A responsive e-commerce platform for a bakery with an integrated shopping cart, payment gateway, and product search functionality. ",
-    icons: [
-      { component: <SiReact />, color: "#61DAFB" },
-      { component: <SiTailwindcss />, color: "#06B6D4" },
-      { component: <SiRedux />, color: "white" },
-      { component: <SiNextdotjs />, color: "white" },
-    ],
-    github: "https://github.com/pouya-jafari/ecommerce",
-    website: "https://ecommerce-demo.com",
-    isWorking: true,
-  },
-  {
-    title: "Chat App",
-    description:
-      "Still Working - A real-time chat application with user authentication, private messaging, and group chats. Upcoming enhancements include message reactions, typing indicators, and read receipts.",
-    icons: [
-      { component: <SiReact />, color: "#61DAFB" },
-      { component: <SiMongodb />, color: "#47A248" },
-    ],
-    github: "https://github.com/pouya-jafari/new-project",
-    website: "https://new-project.com",
-    isWorking: true,
-  },
-];
+import { projects } from "@/data/data";
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);

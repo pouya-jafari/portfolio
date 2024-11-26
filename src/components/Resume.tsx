@@ -2,99 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-  SiMongodb,
-  SiRedux,
-  SiNodedotjs,
-  SiGraphql,
-  SiDeno,
-  SiJavascript,
-} from "react-icons/si";
-
-const resumeData = {
-  workExperience: [
-    {
-      title: "Freelance Full-Stack Developer",
-      duration: "August 2024 - Present",
-      location: "Remote",
-      description: `
-        Delivered freelance projects, specializing in creating responsive, high-performance web applications. Focused on modern web development practices with React, TailwindCSS, and Next.js.
-        Key Projects:
-        - Built a personal portfolio to highlight skills, projects, and certifications. Implemented smooth animations, responsive design, and dark mode.
-        - Created a responsive website for a takeout restaurant featuring a menu, testimonials, and business information. Optimized for speed and usability.
-      `,
-      technologies: [
-        { name: "React", icon: <SiReact /> },
-        { name: "Next.js", icon: <SiNextdotjs /> },
-        { name: "TailwindCSS", icon: <SiTailwindcss /> },
-        { name: "MongoDB", icon: <SiMongodb /> },
-        { name: "Redux", icon: <SiRedux /> },
-        { name: "TypeScript", icon: <SiTypescript /> },
-      ],
-    },
-    {
-      title: "Line Cook",
-      duration: "March 2024 - Present",
-      location: "Cactus Club Cafe, Burnaby, BC",
-      description: `
-        Worked collaboratively in a high-paced kitchen environment. Built strong teamwork, time management, and problem-solving skills.
-      `,
-      technologies: [],
-    },
-  ],
-  education: [
-    {
-      institution: "Langara College",
-      degree: "Associate of Science in Computer Science",
-      year: "April 2024",
-    },
-  ],
-  certifications: [
-    {
-      title: "React - The Complete Guide 2024 (incl. Next.js, Redux)",
-      provider: "Udemy",
-      year: "Sept 2024",
-      link: "https://www.udemy.com/certificate/UC-ab4eb515-a3eb-4148-ac43-a97513e82f67/",
-      technologies: [
-        { name: "React", icon: <SiReact /> },
-        { name: "Next.js", icon: <SiNextdotjs /> },
-        { name: "Redux", icon: <SiRedux /> },
-      ],
-    },
-    {
-      title: "React & TypeScript - The Practical Guide",
-      provider: "Udemy",
-      year: "Sept 2024",
-      link: "https://www.udemy.com/certificate/UC-43eb3d49-1519-400e-b621-e9571f8eef15/",
-      technologies: [
-        { name: "React", icon: <SiReact /> },
-        { name: "TypeScript", icon: <SiTypescript /> },
-      ],
-    },
-    {
-      title: "NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
-      provider: "Udemy",
-      year: "Sept 2024",
-      link: "https://www.udemy.com/certificate/UC-66807af9-11f7-4559-9d21-dc95086190f2/",
-      technologies: [
-        { name: "Node.js", icon: <SiNodedotjs /> },
-        { name: "GraphQL", icon: <SiGraphql /> },
-        { name: "Deno", icon: <SiDeno /> },
-      ],
-    },
-    {
-      title: "The Complete JavaScript Course 2024: From Zero to Expert!",
-      provider: "Udemy",
-      year: "August 2024",
-      link: "https://www.udemy.com/certificate/UC-ac7f33d6-a54c-486e-8521-a12be23e072a/",
-      technologies: [{ name: "JavaScript", icon: <SiJavascript /> }],
-    },
-  ],
-};
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -104,6 +11,8 @@ const sectionVariants = {
     transition: { duration: 0.6, staggerChildren: 0.2 },
   },
 };
+
+import { resumeData } from "@/data/data";
 
 const Resume = () => {
   return (
