@@ -115,7 +115,7 @@ const Skills = () => {
     <div className="py-20 px-5" id="skills">
       <h2 className="text-center text-4xl font-bold mb-10 text-blue-500">
         <span className="inline-block align-middle bg-white w-16 h-1 mr-3" />
-        Skills & Tools
+        Skills
         <span className="inline-block align-middle bg-white w-16 h-1 ml-3" />
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
