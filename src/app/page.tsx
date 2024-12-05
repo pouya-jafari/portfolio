@@ -11,9 +11,8 @@ import Resume from "@/components/Resume";
 export default function Home() {
   return (
     <div className="overflow-x-hidden overflow-y-hidden">
-      <div className="hidden md:block">
-        <Avatar />
-      </div>
+      <Avatar />
+
       <ContactCard />
       <main className="relative dark:bg-black-100 flex flex-col items-center justify-center mx-auto sm:px-10 px-5">
         <div className="max-w-7xl w-full md:mb-16 max-sm:mb-2">

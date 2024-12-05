@@ -11,7 +11,7 @@ const ContactCard = () => {
 
   return (
     <motion.div
-      className="fixed top-4 right-4 z-50 shadow-md bg-white dark:bg-gray-800 rounded-lg p-4 cursor-pointer"
+      className="fixed top-4 right-4 z-50 shadow-md bg-white dark:bg-gray-800 rounded-lg p-4 cursor-pointer hidden md:block"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3 }}

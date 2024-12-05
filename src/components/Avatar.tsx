@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
-import pouyaImg from "@/assets/pouya.png";
+import logoImg from "@/assets/logo.png";
 
 const Avatar = () => {
   const textRef = useRef<HTMLDivElement>(null);
@@ -63,7 +63,7 @@ const Avatar = () => {
     <div className="avatar-container fixed top-4 left-4 flex flex-col items-center z-50">
       <div className="w-16 h-16 rounded-full overflow-hidden shadow-md">
         <Image
-          src={pouyaImg}
+          src={logoImg}
           alt="Pouya Jafari"
           width={64}
           height={64}
@@ -72,7 +72,7 @@ const Avatar = () => {
       </div>
       <div
         ref={textRef}
-        className="mt-2 text-white text-sm font-medium flex gap-1"
+        className="mt-2 text-white text-sm font-medium md:flex gap-1 hidden "
       >
         {["Pouya", "Jafari"].map((word, index) => (
           <span key={index} className="word">
