@@ -128,7 +128,7 @@ export const projects: Project[] = [
             { component: <SiTypescript />, color: "#3178C6" },
         ],
         github: "https://github.com/pouya-jafari/portfolio",
-        website: "https://pouyajafari.netlify.app/",
+        website: "https://pouya-jafari.com/",
     },
     {
         title: "Tanje Takeout Restaurant",
@@ -156,8 +156,8 @@ export const projects: Project[] = [
             { component: <SiRedux />, color: "white" },
             { component: <SiNextdotjs />, color: "white" },
         ],
-        github: "https://github.com/pouya-jafari/ecommerce",
-        website: "https://ecommerce-demo.com",
+        github: "https://github.com/pouya-jafari/Shamim-Cake-Bakery",
+        website: "https://ShamimBakery.com",
         isWorking: true,
     },
     {
@@ -168,7 +168,7 @@ export const projects: Project[] = [
             { component: <SiReact />, color: "#61DAFB" },
             { component: <SiMongodb />, color: "#47A248" },
         ],
-        github: "https://github.com/pouya-jafari/new-project",
+        github: "https://github.com/pouya-jafari/chat-service",
         website: "https://new-project.com",
         isWorking: true,
     },
