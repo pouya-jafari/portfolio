@@ -105,6 +105,7 @@ export const words = [
 
 // Project Section
 export type Project = {
+    id: number;
     title: string;
     image?: StaticImageData | string;
     description: string;
@@ -116,6 +117,7 @@ export type Project = {
 
 export const projects: Project[] = [
     {
+        id: 1,
         title: "Portfolio Website",
         image: portfolioImage,
         description:
@@ -131,6 +133,7 @@ export const projects: Project[] = [
         website: "https://pouya-jafari.com/",
     },
     {
+        id: 2,
         title: "Tanje Takeout Restaurant",
         image: tanjeImage,
         description:
@@ -146,6 +149,7 @@ export const projects: Project[] = [
         website: "https://tanje.netlify.app",
     },
     {
+        id: 3,
         title: "Shamim Bakery",
         image: ShamimBakery,
         description:
@@ -161,6 +165,7 @@ export const projects: Project[] = [
         isWorking: true,
     },
     {
+        id: 4,
         title: "Chat App",
         description:
             "Still Working - A real-time chat application with user authentication, private messaging, and group chats. Upcoming enhancements include message reactions, typing indicators, and read receipts.",
